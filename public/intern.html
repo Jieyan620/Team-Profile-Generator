@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Intern Info</h1>
+  <div class="d-flex">
+    <div class="dropdown mr-1">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+        Employees Type
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+        <a class="dropdown-item" href="index.html">All</a>
+        <a class="dropdown-item" href="manager.html">Manager</a>
+        <a class="dropdown-item" href="engineer.html">Engineer</a>
+        <a class="dropdown-item" href="intern.html">Intern</a>
+      </div>
+    </div>
+  </div>
+  <div id="displayI"></div>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+  axios.get('/info')
+    .then(({ data: info }) => {
+      console.log(info)
+      const infoI =[]
+      info.filter(()=>{
+        if (info.type.value==='intern') {
+         infoI.push(info)
+        }
+      })
+      document.getElementById('display').innerHTML = ''
+      info.forEach(employee => {
+        let employeeElem = document.createElement('div')
+        employeeElem.innerHTML = `
+            <h3>${infoI.userName}</h3>
+            <p>Email: ${infoI.email}</p>
+            <p>Department: ${infoI.department}</p>
+            <p>GitHub ID: ${infoI.github}</p>
+            <p>University: ${infoI.university}</p>
+            <p>Type: ${infoI.type}</p>
+          `
+        document.getElementById('displayI').append(employeeElem)
+      })
+    })
+    .catch(e => console.error(e))
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
