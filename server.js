@@ -2,6 +2,24 @@ const prompt = require('inquirer').createPromptModule()
 const fs = require('fs')
 
 
+function allInfoCard(infolist) {
+
+fs.writeFile
+
+}
+
+function allEnginCard(engineerList) {
+
+}
+
+function allInternCard(internList) {
+
+}
+
+function allmanaCard(managerList) {
+
+}
+
 function htmlCard(infolist) {
   let engineerList = [],
       managerList = [],
@@ -20,10 +38,15 @@ function htmlCard(infolist) {
   }
   console.log(engineerList, internList, managerList)
 
-
-
-  
+  allInfoCard(infolist)
+  allEnginCard(engineerList)
+  allInternCard(internList)
+  allmanaCard(managerList)
 }
+
+
+
+
 
 prompt([
   {
@@ -59,8 +82,8 @@ prompt([
   }
 ])
   .then(response => {
-    // console.log(response)
-//     const info = `Name : ${response.userName}Email : ${response.email}Department : ${response.department}University : ${response.university}GitHub username : ${response.github}
+// console.log(response)
+// const info = `Name : ${response.userName}Email : ${response.  email}Department : ${response.department}University : ${response.university}GitHub username : ${response.github}
 // `
     let infolist = []
     fs.readFile('info.json', 'utf8', (e, data) => {
