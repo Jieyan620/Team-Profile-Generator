@@ -39,10 +39,10 @@ function allInfoCard(infolist) {
         <h5  id="name" class="card-title">${ele.userName}</h5>
       </div>
       <div class="card-body">
-        <h7>Email : ${ele.email}</h7>
-        <h7>Department : ${ele.department}</h7>
-        <h7>University : ${ele.university}</h7>
-        <h7>Github : ${ele.github}</h7>
+        <h7>Email : ${ele.email}</h7><br>
+        <h7>Department : ${ele.department}</h7><br>
+        <h7>University : ${ele.university}</h7><br>
+        <h7>Github : ${ele.github}</h7><br>
         <h7>Type : ${ele.type}</h7>
       </div>
     </div>
@@ -104,10 +104,10 @@ function allEnginCard(engineerList) {
         <h5  id="name" class="card-title">${ele.userName}</h5>
       </div>
       <div class="card-body">
-        <h7>Email : ${ele.email}</h7>
-        <h7>Department : ${ele.department}</h7>
-        <h7>University : ${ele.university}</h7>
-        <h7>Github : ${ele.github}</h7>
+        <h7>Email : ${ele.email}</h7><br>
+        <h7>Department : ${ele.department}</h7><br>
+        <h7>University : ${ele.university}</h7><br>
+        <h7>Github : ${ele.github}</h7><br>
         <h7>Type : ${ele.type}</h7>
       </div>
     </div>
@@ -169,10 +169,10 @@ const html = `
         <h5  id="name" class="card-title">${ele.userName}</h5>
       </div>
       <div class="card-body">
-        <h7>Email : ${ele.email}</h7>
-        <h7>Department : ${ele.department}</h7>
-        <h7>University : ${ele.university}</h7>
-        <h7>Github : ${ele.github}</h7>
+        <h7>Email : ${ele.email}</h7><br>
+        <h7>Department : ${ele.department}</h7><br>
+        <h7>University : ${ele.university}</h7><br>
+        <h7>Github : ${ele.github}</h7><br>
         <h7>Type : ${ele.type}</h7>
       </div>
     </div>
@@ -234,10 +234,10 @@ function allmanaCard(managerList) {
         <h5  id="name" class="card-title">${ele.userName}</h5>
       </div>
       <div class="card-body">
-        <h7>Email : ${ele.email}</h7>
-        <h7>Department : ${ele.department}</h7>
-        <h7>University : ${ele.university}</h7>
-        <h7>Github : ${ele.github}</h7>
+        <h7>Email : ${ele.email}</h7><br>
+        <h7>Department : ${ele.department}</h7><br>
+        <h7>University : ${ele.university}</h7><br>
+        <h7>Github : ${ele.github}</h7><br>
         <h7>Type : ${ele.type}</h7>
       </div>
     </div>
