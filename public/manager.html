@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,10 +9,11 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Manager Info</h1>
+  <nav class="navbar sticky-top navbar-light bg-light ">
+  <h1>Employees Info</h1>
   <div class="d-flex">
     <div class="dropdown mr-1">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+      <button type="button" class="btn btn-info dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false" data-offset="10,20">
         Employees Type
       </button>
@@ -23,40 +25,46 @@
       </div>
     </div>
   </div>
-  <div id="displayM"></div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      axios.get('/info')
-        .then(({ data: info }) => {
-          console.log(info)
-          const infoM = []
-          info.filter(() => {
-            if (info.type.value === 'manager') {
-              infoM.push(info)
-            }
-          })
-          document.getElementById('display').innerHTML = ''
-          info.forEach(employee => {
-            let employeeElem = document.createElement('div')
-            employeeElem.innerHTML = `
-                <h3>${infoM.userName}</h3>
-                <p>Email: ${infoM.email}</p>
-                <p>Department: ${infoM.department}</p>
-                <p>GitHub ID: ${infoM.github}</p>
-                <p>University: ${infoM.university}</p>
-                <p>Type: ${infoM.type}</p>
-              `
-            document.getElementById('displayM').append(employeeElem)
-          })
-        })
-        .catch(e => console.error(e))
-    </script>
+  </nav>
+  <div id="display" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-right: 20px; margin-left: 20px; margin-top: 10px;">
+   
+     <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h5  id="name" class="card-title">ktuyje</h5>
+      </div>
+      <div class="card-body">
+        <h7>Email : vsvc</h7>
+        <h7>Department : ktujtr</h7>
+        <h7>University : cqcwAV</h7>
+        <h7>Github : KRYTUK</h7>
+        <h7>Type : manager</h7>
+      </div>
+    </div>
+     
+     <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h5  id="name" class="card-title">akakk</h5>
+      </div>
+      <div class="card-body">
+        <h7>Email : akaka@gmail.com</h7>
+        <h7>Department : fsdafasd</h7>
+        <h7>University : weffds</h7>
+        <h7>Github : fweaijoiv</h7>
+        <h7>Type : manager</h7>
+      </div>
+    </div>
+     
 
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </body>
 </html>
+  
